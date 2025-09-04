@@ -1,9 +1,11 @@
 .footer {
-  background: #1e293b; /* dark steel */
+  background: #1e293b;
   color: white;
   padding: 1.5rem 2rem;
   text-align: center;
-  margin-top: auto; /* pushes footer to bottom if flex layout */
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .footer__content {
@@ -15,4 +17,9 @@
 
 .footer__content p {
   margin: 0.3rem 0;
+  color: #e2e8f0;
+}
+
+.footer__content p:first-child {
+  font-weight: 500;
 }

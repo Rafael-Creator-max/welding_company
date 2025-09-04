@@ -12,14 +12,14 @@ const Home = () => {
       </section>
 
       {/* About Preview */}
-      <section className="home__about">
+      {/* <section className="home__about">
         <h2>About Us</h2>
         <p>
           With decades of experience, Welding Co. delivers top-notch MIG, TIG, and
           custom fabrication work. Our certified welders ensure every project meets
           the highest safety and quality standards.
         </p>
-      </section>
+      </section> */}
 
       {/* Services Preview */}
       <section className="home__services">
