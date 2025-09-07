@@ -1,23 +1,50 @@
 import '../styles/Services.css'
+import {supabase} from '../lib/supabase'
+import type { Service } from '../types/database'
+import { useEffect, useState } from 'react'
 
 const Services = () => {
+  const [services,setServices] = useState<Service[]>([])
+  const [error,setError] = useState<string | null>(null)
+
+  useEffect(()=>{
+    const fetchServices = async () =>{
+      const {data,error} = await supabase
+      .from('services')
+      .select('*')
+      .order('name',{ascending:true})
+      if (error){
+        setError(error.message)
+      } else {
+        setServices(data || [])
+      }
+    }
+    fetchServices()
+
+  },[])
   return (
     <div className="services">
       <h1>Our Services</h1>
       <p>We provide a full range of welding and fabrication services.</p>
+      {error && <p style={{color: 'red'}}>{error}</p>}
+
       <ul className="services__list">
-        <li>
-          <h3>MIG Welding</h3>
-          <p>Strong, efficient, and versatile welding for various metals.</p>
-        </li>
-        <li>
-          <h3>TIG Welding</h3>
-          <p>Precision welding for clean and high-quality finishes.</p>
-        </li>
-        <li>
-          <h3>Custom Fabrication</h3>
-          <p>Custom metal structures designed and built to your specifications.</p>
-        </li>
+        {services.map((s) =>(
+          <li key={s.id}>
+            {s.image_path && (
+              <img src={s.image_path} alt={s.name} className="services__list-image" />
+              
+            )}
+
+            <h3>{s.name}</h3>
+            <p>{s.description}</p>
+          </li>
+
+        ))
+
+        }
+        
+          
       </ul>
     </div>
   )
