@@ -47,18 +47,24 @@ const Contact = () => {
 
       <form className="contact__form" onSubmit={handleSubmit}>
         <label>
-          Name:
-          <input type="text" name="name" required />
+          <span>Name:</span>
+          <div>
+            <input type="text" name="name" required />
+          </div>
         </label>
 
         <label>
-          Email:
-          <input type="email" name="email" required />
+          <span>Email:</span>
+          <div>
+            <input type="email" name="email" required />
+          </div>
         </label>
 
         <label>
-          Message:
-          <textarea name="message" rows={4} required></textarea>
+          <span>Message:</span>
+          <div>
+            <textarea name="message" rows={4} required></textarea>
+          </div>
         </label>
 
         <button type="submit" disabled={loading}>
