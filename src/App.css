@@ -4,13 +4,20 @@
   min-height: 100vh;
   width: 100%;
 }
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif; /* or any font you prefer */
+  margin: 0;
+  padding: 0;
+}
 
+a {
+  text-decoration: none; /* removes underlines from links */
+  color: inherit;        /* makes links use the surrounding text color */
+}
 .main-content {
-  flex: 1 0 auto;
+  flex: 1 0 ;
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -25,7 +32,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .main-content {
-    padding: 1rem;
+    /* padding: 1rem; */
   }
 }
 

@@ -3,26 +3,53 @@
   padding: 0;
 }
 .home {
-  padding: 2rem;
+  display: grid;
+  grid-template-rows: 2fr 2fr;
+  height: 100%;
+
 }
 
 .home__hero {
-  background: linear-gradient(120deg, #f59e0b, #b45309);
-  color: white;
+  background-image: url('/What_Is_a_Combo_Welder_dcd0f093-2163-4e12-b782-7bc35160d9bf.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 3rem 2rem;
   text-align: center;
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
 }
+
+.home__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 41, 59, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home__hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+
 
 .home__hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .home__hero p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .btn-primary {
@@ -41,11 +68,45 @@
 
 .home__about,
 .home__services {
+  padding: 2rem ;
   margin-top: 2rem;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home__about h2,
 .home__services h2 {
+  align-self: center;
   margin-bottom: 0.5rem;
   color: #1e293b;
+  
+}
+.home__about p,
+.home__services p {
+  align-self: center ;
+  margin-bottom: 1rem;
+  color: #334155;
+}
+.home__services ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  text-decoration: none;  
+  margin-top: 0.5rem;
+  list-style-type: disc;
+  padding:4rem;
+  list-style: none;
+  li{
+    width: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2rem ;
+    background-color: rgb(237, 236, 236);
+    border-radius: 15px;
+    text-wrap: wrap ;
+  }
 }

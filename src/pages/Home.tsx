@@ -6,30 +6,35 @@ const Home = () => {
     <div className="home">
       {/* Hero Section */}
       <section className="home__hero">
-        <h1>Welcome to Welding Co.</h1>
-        <p>Your trusted partner for quality welding and fabrication.</p>
-        <a href="/services" className="btn-primary">View Our Services</a>
+        <div>
+          <h1>Welcome to Welding Co.</h1>
+          <p>Your trusted partner for quality welding and fabrication.</p>
+          <a href="/services" className="btn-primary">View Our Services</a>
+        </div>
       </section>
 
-      {/* About Preview */}
-      {/* <section className="home__about">
-        <h2>About Us</h2>
-        <p>
-          With decades of experience, Welding Co. delivers top-notch MIG, TIG, and
-          custom fabrication work. Our certified welders ensure every project meets
-          the highest safety and quality standards.
-        </p>
-      </section> */}
-
-      {/* Services Preview */}
       <section className="home__services">
-        <h2>Our Expertise</h2>
+        <h2>What we offer</h2>
+        <p>With decades of experience and state-of-the-art equipment, we deliver excellence in every project.</p>
         <ul>
-          <li>MIG Welding</li>
-          <li>TIG Welding</li>
-          <li>Custom Metal Fabrication</li>
+          <li>
+            <span>Over 15 years of expertise in industrial welding and metal fabrication.</span>  
+            <span>Experience</span>
+            <strong>20+</strong>
+          </li>
+          <li>
+            <span>Round-the-clock emergency welding services for critical repairs.</span> 
+            <span>Emergencies</span>
+            <strong>24/7</strong>
+          </li>
+          <li>
+            <span>Qualified and certified welders</span>
+            <span>Professional Team</span>
+            <strong>In-house team</strong>
+          </li>
         </ul>
       </section>
+
     </div>
   )
 }
