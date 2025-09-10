@@ -1,0 +1,29 @@
+.svcCat { padding: 2rem; display: grid; gap: 1.2rem; }
+.svcCat__header { display: flex; align-items: center; gap: 1rem; }
+.svcCat__back {
+  background: #1e293b; color: #fff; border: 0;
+  padding: .4rem .8rem; border-radius: 8px; cursor: pointer;
+}
+.svcCat__hero {
+  height: 240px; border-radius: 12px;
+  background: #111 center/cover no-repeat;
+}
+.svcCat__desc { max-width: 70ch; }
+
+.svcCat__grid {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+.svcCat__card { border-radius: 12px; overflow: hidden; position: relative; }
+.svcCat__imgWrap { position: relative; }
+.svcCat__imgWrap img { width: 100%; display: block; }
+
+.svcCat__hover {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);
+  color: #fff; opacity: 0;
+  display: flex; flex-direction: column; justify-content: end;
+  padding: .8rem;
+  transition: opacity .2s ease;
+}
+.svcCat__imgWrap:hover .svcCat__hover { opacity: 1; }
