@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import ServiceCategoryCard from '../components/ServiceCategory'
+import ServiceCategoryCard from '../components/ServiceCategoryCard'
 import '../styles/ServicesIndex.css'
 
 type Category = {

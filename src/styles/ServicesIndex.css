@@ -1,5 +1,23 @@
-.servicesIndex { padding: 2rem; display: grid; gap: 1.5rem; }
-.servicesIndex__grid {
-  display: grid; gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.servicesIndex { 
+  padding: 2rem; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; 
 }
+
+.servicesIndex__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.servicesIndex__grid > * {
+  width: 280px;
+}
+
