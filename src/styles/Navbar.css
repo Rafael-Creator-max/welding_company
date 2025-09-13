@@ -1,10 +1,22 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  flex-direction: row;
   background: #1e293b; /* dark steel */
   color: white;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .navbar__logo a {
@@ -18,6 +30,101 @@
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .navbar__links {
+    display: flex !important;
+  }
+}
+
+/* Mobile styles */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e293b;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .navbar__links.active {
+    max-height: 500px; /* Adjust based on your content */
+    padding: 1rem 0;
+  }
+  
+  .navbar__links li {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .navbar__links a {
+    display: block;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    transition: background-color 0.2s;
+  }
+  
+  .navbar__links a:hover,
+  .navbar__links a:focus {
+    background-color: #334155;
+  }
+  
+  .navbar__links a.active {
+    background-color: #334155;
+    border-left: 4px solid #f59e0b;
+    border-bottom: none;
+  }
 }
 
 .navbar__links a {

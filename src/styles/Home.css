@@ -19,12 +19,11 @@ li strong {
 /* Style for the second <span> inside <li>: solid background */
 li span:nth-of-type(2) {
   display: inline-block;
-  background: #1e293b;
-  color: #fff;
+  color: #1a365d;
   padding: 0.3em 1em;
   border-radius: 0.7em;
   margin: 0.3em 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 *{
   margin: 0;
@@ -34,10 +33,12 @@ li span:nth-of-type(2) {
   display: grid;
   grid-template-rows: 2fr 2fr;
   height: 100%;
+  width: 100%;
 
 }
 
 .home__hero {
+  width: 100%;
   background-image: url('/What_Is_a_Combo_Welder_dcd0f093-2163-4e12-b782-7bc35160d9bf.jpg');
   background-position: center;
   background-size: cover;
@@ -98,6 +99,46 @@ li span:nth-of-type(2) {
   background: #334155;
 }
 
+/* Contact Section */
+.home__contact {
+  background-color: #f8fafc;
+  padding: 4rem 2rem;
+  margin-top: 3rem;
+}
+
+.home__contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.home__contact h2 {
+  color: #1a365d;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home__contact p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home__contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .home__contact {
+    padding: 3rem 1.5rem;
+  }
+}
+
 .home__about,
 .home__services {
   padding: 2rem ;
@@ -111,14 +152,15 @@ li span:nth-of-type(2) {
 .home__services h2 {
   align-self: center;
   margin-bottom: 0.5rem;
-  color: #1e293b;
-  
+  color: #1a365d;
 }
 .home__about p,
 .home__services p {
   align-self: center ;
   margin-bottom: 1rem;
   color: #334155;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 .home__services ul {
   display: flex;
@@ -146,6 +188,8 @@ li span:nth-of-type(2) {
     span {
       text-align: center;
       margin-bottom: 0.5rem;
+      /* color: #1a365d; */
+      
     }
   }
 }

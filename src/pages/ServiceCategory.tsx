@@ -115,10 +115,11 @@ export default function ServiceCategory() {
             <ul className="svcCat__list">
               <li>Custom staircases and railings</li>
               <li>Decorative metal screens and facades</li>
-              <li>Structural steel framing</li>
+              
               <li>Metal roofing and cladding</li>
               <li>Bespoke metal furniture</li>
-              <li>Restoration of historic metalwork</li>
+              <li>Restoration of metalworks</li>
+              <li>Ornaments and sculptures</li>
             </ul>
           </div>
 
@@ -126,7 +127,6 @@ export default function ServiceCategory() {
             <h2>Materials We Work With</h2>
             <ul className="svcCat__list">
               <li>Stainless Steel</li>
-              <li>INOX</li>
               <li>Wrought Iron</li>
               <li>Corten Steel</li>
               <li>Aluminum</li>

@@ -1,4 +1,5 @@
 import '../styles/Home.css'
+import ContactForm from '../components/ContactForm'
 
 
 const Home = () => {
@@ -7,15 +8,19 @@ const Home = () => {
       {/* Hero Section */}
       <section className="home__hero">
         <div>
-          <h1>Welcome to Perez Welding Co.</h1>
+          <h1>Welcome to P. T. Welding Co.</h1>
           <p>Your trusted partner for quality welding and fabrication.</p>
           <a href="/services" className="btn-primary">View Our Services</a>
         </div>
       </section>
-
+      {/* Services Overview Section */} 
       <section className="home__services">
         <h2>What we offer</h2>
-        <p>With decades of experience and state-of-the-art equipment, we deliver excellence in every project.</p>
+        <p>
+          With decades of experience and state-of-the-art equipment, we deliver excellence in every project.
+          Our team is dedicated to providing reliable, efficient, and high-quality welding solutions tailored to your needs.
+          From small repairs to large-scale fabrication, trust us to get the job done right the first time.
+        </p>
         <ul>
           <li>
             <span>Over 20 years of expertise in industrial welding and metal fabrication.</span>  
@@ -35,6 +40,16 @@ const Home = () => {
         </ul>
       </section>
 
+      {/* Contact Form Section */}
+      <section className="home__contact">
+        <div className="home__contact-content">
+          <div>
+            <h2>Get In Touch</h2>
+            <p>Have questions or want to discuss your project? We'd love to hear from you!</p>
+          </div>
+          <ContactForm />
+        </div>
+      </section>
     </div>
   )
 }
