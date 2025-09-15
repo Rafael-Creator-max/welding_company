@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../styles/Home.css'
 import ContactForm from '../components/ContactForm'
 
@@ -10,7 +11,7 @@ const Home = () => {
         <div>
           <h1>Welcome to EuroWelding Co.</h1>
           <p>Your trusted partner for quality welding and fabrication.</p>
-          <a href="/services" className="btn-primary">View Our Services</a>
+          <Link to="/services" className="btn-primary">View Our Services</Link>
         </div>
       </section>
       {/* Services Overview Section */} 
