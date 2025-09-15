@@ -8,7 +8,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="home__hero">
         <div>
-          <h1>Welcome to P. T. Welding Co.</h1>
+          <h1>Welcome to EuroWelding Co.</h1>
           <p>Your trusted partner for quality welding and fabrication.</p>
           <a href="/services" className="btn-primary">View Our Services</a>
         </div>
@@ -44,7 +44,7 @@ const Home = () => {
       <section className="home__contact">
         <div className="home__contact-content">
           <div>
-            <h2>Get In Touch</h2>
+            <h2>Contact us!</h2>
             <p>Have questions or want to discuss your project? We'd love to hear from you!</p>
           </div>
           <ContactForm />

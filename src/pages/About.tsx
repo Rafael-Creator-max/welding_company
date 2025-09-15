@@ -3,24 +3,23 @@ import '../styles/About.css'
 const About = () => {
   return (
     <div className="about">
-      <h1>About Perez Lasorganisatie</h1>
+      <h1>About EuroWelding</h1>
       <p>
-        We are a family business with more than 20 years of experience in the world of welding and metal fabrication.
-      </p>
-      <p>
-        Our story begins with our grandfather, who first picked up the torch with a strong work ethic and a passion for craftsmanship.
-      </p>
-      <p>For us, welding is more than just a job. It’s a passion. From precision TIG welds in industrial environments to elegant stainless steel structures for homes and businesses, we put the same care and attention to detail into every piece of work.
-        He passed that dedication on to his son, and today the third generation proudly continues the tradition.
+        <strong>Who are we?</strong><br />
+        EuroWelding is a family-owned business with over 20 years of experience in welding and metal fabrication. We are dedicated to delivering high-quality solutions for residential, commercial, and industrial clients.
       </p>
       <p>
-       What started as a small workshop has grown into a company built on trust, quality, and family values. Every project we take on — whether it’s an inox railing, custom staircase, or industrial piping installation — carries the knowledge and skill passed down through generations.
+        <strong>What do we do?</strong><br />
+        We specialize in stainless steel, aluminum, and carbon steel welding, offering services such as custom railings, staircases, structural work, and industrial piping. Our team combines traditional craftsmanship with modern techniques to ensure precision and durability in every project.
       </p>
-      <p>For us, welding is more than just a job. It’s a passion. From precision TIG welds in industrial environments to elegant stainless-steel structures for homes and businesses, we put the same care and attention to detail into every piece of work.
+      <p>
+        <strong>Why choose us?</strong><br />
+        Our commitment to quality, reliability, and customer satisfaction sets us apart. As a family business, we value trust and long-term relationships, treating every project with the utmost care and attention to detail.
       </p>
-      <p>Our clients know us not only for our technical expertise but also for our personal approach. Being a family business means we treat every project as if it were our own, combining tradition with modern techniques to deliver lasting results.
+      <p>
+        <strong>Our mission</strong><br />
+        To provide exceptional welding and metal fabrication services, upholding the values of integrity, professionalism, and excellence in every job we undertake.
       </p>
-      <p>Whether you’re looking for architectural inox solutions or industrial welding services, you can count on us to bring reliability, craftsmanship, and heart to the job.</p>
     </div>
   )
 }

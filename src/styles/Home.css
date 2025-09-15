@@ -26,19 +26,23 @@ li span:nth-of-type(2) {
   font-weight: 600;
 }
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 .home {
-  display: grid;
+  /* display: grid;
   grid-template-rows: 2fr 2fr;
   height: 100%;
-  width: 100%;
-
+  max-width: 100% */
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
 }
 
 .home__hero {
   width: 100%;
+  min-height: 400px;
   background-image: url('/What_Is_a_Combo_Welder_dcd0f093-2163-4e12-b782-7bc35160d9bf.jpg');
   background-position: center;
   background-size: cover;
@@ -104,6 +108,7 @@ li span:nth-of-type(2) {
   background-color: #f8fafc;
   padding: 4rem 2rem;
   margin-top: 3rem;
+  width: 100%;
 }
 
 .home__contact-content {
@@ -128,10 +133,22 @@ li span:nth-of-type(2) {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .home__services ul {
+    gap: 5rem;
+    max-width: 100%;
+  }
+  
+  .home__services ul li {
+    width: 200px;
+    margin: 0.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .home__contact-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 6rem;
   }
   
   .home__contact {
@@ -141,11 +158,13 @@ li span:nth-of-type(2) {
 
 .home__about,
 .home__services {
+  width: 100%;
   padding: 2rem ;
   margin-top: 2rem;
   display: flex; 
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  
 }
 
 .home__about h2,
@@ -165,30 +184,36 @@ li span:nth-of-type(2) {
 .home__services ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  
-  text-decoration: none;  
-  margin-top: 0.5rem;
-  list-style-type: disc;
-  padding:4rem;
+  text-decoration: none;
+  margin: 2rem 0;
+  padding: 0;
   list-style: none;
+  max-width: 1400px;
+  width: 100%;
+  gap: 6rem;
   li{
-    width: 200px;
+    width: 220px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 
-    padding: 2rem ;
-    margin: 1rem;
+    padding: 2rem 1.5rem;
+    margin: 0;
     background-color: rgb(237, 236, 236);
     border-radius: 15px;
-    text-wrap: wrap ;
+    text-wrap: wrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
     span {
       text-align: center;
       margin-bottom: 0.5rem;
-      /* color: #1a365d; */
       
     }
   }

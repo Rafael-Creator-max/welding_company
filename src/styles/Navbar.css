@@ -4,9 +4,9 @@
   background: #1e293b; /* dark steel */
   color: white;
   width: 100%;
-  padding: 1rem 2rem;
   position: relative;
-  
+  padding: 1rem 2rem;
+  z-index: 1000; /* Ensure navbar stays above other content */
 }
 
 .navbar__container {
@@ -33,6 +33,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
+  z-index: 1001; /* Ensure menu appears above other content */
 }
 
 /* Desktop styles */
@@ -77,15 +78,18 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .hamburger {
     display: flex;
+    z-index: 1002; /* Ensure hamburger is above other elements */
   }
   
   .navbar__links {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 70px; /* Adjust based on your navbar height */
     left: 0;
     right: 0;
     background: #1e293b;
@@ -96,6 +100,7 @@
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1001; /* Ensure menu appears above other content */
   }
   
   .navbar__links.active {
