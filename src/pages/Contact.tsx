@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa'
 import ContactForm from '../components/ContactForm'
 import '../styles/Contact.css'
 
