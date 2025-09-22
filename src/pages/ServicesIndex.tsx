@@ -27,7 +27,11 @@ export default function ServicesIndex() {
         if (error) throw error
         setCats(data ?? [])
       } catch (err: any) {
-        setError(err.message ?? 'Failed to load categories.')
+        if (err.message?.includes('Failed to fetch') || !navigator.onLine) {
+          setError('Unable to load services. Please check your internet connection and try again.');
+        } else {
+          setError('Failed to load services. Please try again later.');
+        }
       } finally {
         setLoading(false)
       }
@@ -35,7 +39,20 @@ export default function ServicesIndex() {
   }, [])
 
   if (loading) return <div className="servicesIndex"><p>Loading…</p></div>
-  if (error)   return <div className="servicesIndex"><p style={{ color: 'red' }}>{error}</p></div>
+  if (error) return (
+    <div className="servicesIndex">
+      <div style={{
+        backgroundColor: '#ffebee',
+        color: '#c62828',
+        padding: '1rem',
+        borderRadius: '4px',
+        margin: '1rem 0',
+        borderLeft: '4px solid #c62828'
+      }}>
+        {error}
+      </div>
+    </div>
+  )
 
   return (
     <div className="servicesIndex">

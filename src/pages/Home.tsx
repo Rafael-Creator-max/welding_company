@@ -9,7 +9,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="home__hero">
         <div>
-          <h1>Welcome to EuroWelding Co.</h1>
+          <h1>Welcome to InoxWeld</h1>
           <p>Your trusted partner for quality welding and fabrication.</p>
           <Link to="/services" className="btn-primary">View Our Services</Link>
         </div>

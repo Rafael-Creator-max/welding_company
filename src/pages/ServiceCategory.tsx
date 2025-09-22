@@ -51,7 +51,11 @@ export default function ServiceCategory() {
         setCat(c)
         setImgs(g ?? [])
       } catch (err: any) {
-        setError(err.message ?? 'Failed to load category.')
+        if (err.message?.includes('Failed to fetch') || !navigator.onLine) {
+          setError('Unable to load category. Please check your internet connection and try again.');
+        } else {
+          setError(err.message ?? 'Failed to load category. Please try again later.');
+        }
       } finally {
         setLoading(false)
       }

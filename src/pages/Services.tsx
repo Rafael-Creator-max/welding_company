@@ -9,24 +9,48 @@ const Services = () => {
 
   useEffect(()=>{
     const fetchServices = async () =>{
-      const {data,error} = await supabase
-      .from('services')
-      .select('*')
-      .order('name',{ascending:true})
-      if (error){
-        setError(error.message)
-      } else {
-        setServices(data || [])
+      try {
+        const {data,error} = await supabase
+          .from('services')
+          .select('*')
+          .order('name',{ascending:true})
+        
+        if (error) {
+          throw error;
+        }
+        
+        setServices(data || []);
+        setError(null);
+      } catch (err) {
+        if (!navigator.onLine) {
+          setError('You are currently offline. Please check your internet connection and try again.');
+        } else if (err instanceof Error) {
+          setError('Failed to load services. ' + err.message);
+        } else {
+          setError('An unknown error occurred while loading services.');
+        }
+        setServices([]);
       }
     }
-    fetchServices()
-
-  },[])
+    
+    fetchServices();
+  }, [])
   return (
     <div className="services">
       <h1>Our Services</h1>
       <p>We provide a full range of welding and fabrication services.</p>
-      {error && <p style={{color: 'red'}}>{error}</p>}
+      {error && (
+        <div className="error-message" style={{
+          backgroundColor: '#ffebee',
+          color: '#c62828',
+          padding: '1rem',
+          borderRadius: '4px',
+          margin: '1rem 0',
+          borderLeft: '4px solid #c62828'
+        }}>
+          {error}
+        </div>
+      )}
 
       <ul className="services__list">
         {services.map((s) =>(

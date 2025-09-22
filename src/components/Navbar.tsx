@@ -13,7 +13,7 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         <div className="navbar__logo">
-          <Link to="/">EuroWelding</Link>
+          <Link to="/">InoxWeld</Link>
         </div>
         <div 
           className={`hamburger ${isOpen ? 'open' : ''}`} 
